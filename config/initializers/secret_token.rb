@@ -9,4 +9,4 @@
 
 # Make sure your secret_key_base is kept private
 # if you're sharing your code publicly.
-Photogur::Application.config.secret_key_base = '38fa321978d09e23d02b9ec120af35356d5e36cb068b349866f168e121fd22172a5fc49d0cd79ac8d76a64b4252b6403577d71d9f68ff512721e9a9fcf9b3b23'
+Photogur::Application.config.secret_key_base = '1b996ff0b027439b3b96d495265c7987e2c0df5086301aee5f61996e4f1b56f96ff1f852dc6096077d4c1e67307e431736d7e8f81712af970eba59f6f0c981be'

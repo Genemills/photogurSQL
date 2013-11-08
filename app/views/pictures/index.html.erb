@@ -1,7 +1,27 @@
-<h1>Pictures (<%= @pictures.length %>)</h1>
+<h1>Pictures</h1>
+
 <%= link_to "New Picture", "/pictures/new" %>
 
 <%- @pictures.each do |picture| %>
   <p><%= picture[:title] %>, <%= picture[:artist] %></p>
-<%= link_to image_tag(picture.url), "/pictures/#{picture.id}" %> 
+  <%= link_to image_tag(picture.url), "/pictures/#{picture.id}" %>
 <% end %>
+
+<h2>Most recent pictures</h2>
+<ul>
+  <% @most_recent_pictures.each do |picture| %>
+    <li><%= picture.title %></li>
+  <% end %>
+</ul>
+
+<h2>Photos older than 1 month</h2>
+<ul>
+<% @created_before.each do |picture| %>
+  <p><%= picture[:title] %>, <%= picture[:artist] %></p>
+  <%= link_to image_tag(picture.url), "/pictures/#{picture.id}" %>
+<% end %>
+</ul>
+
+<h2>Total photos older than 1 month is <%= @created_before.count %></h2>
+
+
